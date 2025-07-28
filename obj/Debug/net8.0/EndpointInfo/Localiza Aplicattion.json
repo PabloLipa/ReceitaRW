@@ -1,0 +1,188 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "CNPJ API Pablo Localiza",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Autentic/register": {
+      "post": {
+        "tags": [
+          "Autentic"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistroDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Autentic/login": {
+      "post": {
+        "tags": [
+          "Autentic"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogInDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogInDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogInDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Empresa": {
+      "post": {
+        "tags": [
+          "Empresa"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarEmpresaDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarEmpresaDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CadastrarEmpresaDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Empresa"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CadastrarEmpresaDTO": {
+        "required": [
+          "cnpj"
+        ],
+        "type": "object",
+        "properties": {
+          "cnpj": {
+            "maxLength": 18,
+            "minLength": 14,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogInDTO": {
+        "required": [
+          "email",
+          "senha"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "senha": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistroDTO": {
+        "required": [
+          "email",
+          "nome",
+          "senha"
+        ],
+        "type": "object",
+        "properties": {
+          "nome": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "email": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "format": "email"
+          },
+          "senha": {
+            "minLength": 6,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Insira o token JWT no formato: Bearer {token}",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

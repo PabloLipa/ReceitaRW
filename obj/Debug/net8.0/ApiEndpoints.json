@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "Localiza_Aplicattion.Controllers.AutenticController",
+    "Method": "Login",
+    "RelativePath": "api/Autentic/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "Localiza_Aplicattion.DTO.DTO_Usuario.LogInDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Localiza_Aplicattion.Controllers.AutenticController",
+    "Method": "Register",
+    "RelativePath": "api/Autentic/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "Localiza_Aplicattion.DTO.DTO_Usuario.RegistroDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Localiza_Aplicattion.Controllers.EmpresaController",
+    "Method": "CadastrarEmpresa",
+    "RelativePath": "api/Empresa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Localiza_Aplicattion.DTO.DTO_Empresa.CadastrarEmpresaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Localiza_Aplicattion.Controllers.EmpresaController",
+    "Method": "GetEmpresas",
+    "RelativePath": "api/Empresa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

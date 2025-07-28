@@ -1,0 +1,6 @@
+@Localiza_Aplicattion_HostAddress = http://localhost:5192
+
+GET {{Localiza_Aplicattion_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

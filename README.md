@@ -8,7 +8,7 @@ Frontend: Angular 20
 
 Backend: Asp.NET/ .NET core / C#
 
-Banco de Dados: PostgreSQL / MongoDB
+Banco de Dados: SQLite
 
 API Externa: ReceitaWS
 

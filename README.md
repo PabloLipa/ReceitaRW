@@ -79,11 +79,6 @@ Validação de entrada e feedback ao usuário
 Organização clara entre front-end e back-end
 
 
-🚀 Como Rodar Localmente
-bash
-# Clonar o repositório
-git clone https://github.com/seu-usuario/nome-do-repo.git
-
 # Backend
 cd backend
 npm install
